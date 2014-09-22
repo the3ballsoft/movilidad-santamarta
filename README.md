@@ -1,4 +1,4 @@
-Movilidad Santa Marta
+Movilidad Santa Marta by The3BallSoft
 =========
 
 El proyecto no incluye las plataformas (por razones de almacenamiento), para correrlo despues de clonar este repositorio tendra que hacer lo siguiente:
