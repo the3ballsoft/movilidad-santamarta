@@ -1,0 +1,9 @@
+<ion-view title="Pico y Placa">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="vehiculo in vehiculos" type="item-text-wrap" href="#/tab/picoyplaca/{{vehiculo.id}}">
+        {{vehiculo.nombre}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

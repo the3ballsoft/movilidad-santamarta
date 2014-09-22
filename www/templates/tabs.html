@@ -1,0 +1,31 @@
+<!-- 
+  Create tabs with an icon and label, using the tabs-positive style. 
+  Each tab's child <ion-nav-view> directive will have its own 
+  navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top">
+
+
+  <!-- Pico y placa Tab -->
+  <ion-tab title="Pico y placa" icon="icon ion-model-s" href="#/tab/dash">
+    <ion-nav-view name="tab-picoyplaca"></ion-nav-view>
+  </ion-tab>
+
+
+  <!-- Parqueadero Tab -->
+  <ion-tab title="Parking" icon="icon ion-ios7-location" href="#/tab/parking">
+    <ion-nav-view name="tab-parking"></ion-nav-view>
+  </ion-tab>
+
+ <!-- Foto multa Tab -->
+  <ion-tab title="Foto multa" icon="icon ion-android-camera" href="#/tab/fotomulta">
+    <ion-nav-view name="tab-fotomulta"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Noticias Tab -->
+  <ion-tab title="Noticias" icon="icon ion-social-rss" href="#/tab/noticias">
+    <ion-nav-view name="tab-noticias"></ion-nav-view>
+  </ion-tab>
+
+
+</ion-tabs>
