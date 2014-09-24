@@ -1,0 +1,55 @@
+<ion-view title="Agregar vehiculo">
+  <ion-content has-header="true" padding="true">
+  <form ng-submit="AddVehiculo(data)">
+
+	 	<label class="item item-input">
+	  		<span class="input-label">Nombre</span>
+	  		<input type="text">
+	  	</label>
+
+	  	<label class="item item-input mayuscula">
+	  		<span class="input-label">Placa</span>
+	  		<input type="text">
+	  	</label>
+
+	  	<div class="item item-input item-select">
+	    	  <div class="input-label">
+	        	Tipo de servicio
+	      	  </div>
+		      <select ng-model="tipo" ng-init="tipo = 1">
+		        <option value="1">Particular</option>
+		        <option value="2">Servicio publico</option>
+		      </select>
+	    </div>
+
+	    <!-- Mostramos la imagen del taxi si escogio servicio publico -->
+	    <label class="item item-input" ng-hide="tipo==1">
+	  		<span class="input-label">Tipo del vehiculo</span>
+	  		<img height="20%" width="30%" src="img/taxi.png">
+	  	</label>
+
+		<!-- mostramos las imagenes de camioneta o carro si escogio servicio particular -->
+		<div class="item item-divider ng-binding" ng-show="tipo==1">
+          Tipo de vehiculo
+        </div>
+
+		<div class="button-bar" ng-show="tipo==1">
+		    
+            <a class="button" ng-class="{'button-positive': isActive('automovil')}" ng-click="setActive('automovil')">
+            	Automovil<br><img height="20%" width="30%" src="img/automovil.png">
+            </a>
+            <a class="button" ng-class="{'button-positive': isActive('camioneta')}" ng-click="setActive('camioneta')">
+            	Camioneta<br><img height="20%" width="30%" src="img/camioneta.png">
+            </a>
+           
+        </div>
+
+	    <ion-toggle ng-model="notificaciones" toggle-class="toggle-calm" ng-checked="true">Activar notificaciones</ion-toggle>
+
+		<button class="button button-block button-large button-positive" type="submit">
+			Agregar!
+		</button>
+		<!-- {{ notificaciones }} -->
+	</form>
+  </ion-content>
+</ion-view>

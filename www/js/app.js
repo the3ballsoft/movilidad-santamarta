@@ -47,12 +47,21 @@ angular.module('movilidadStaMta', ['ionic', 'movilidadStaMta.controllers', 'movi
         }
       }
     })
-    .state('tab.picoyplaca-detalle', {
+    .state('tab.picoyplaca-detail', {
       url: '/picoyplaca/:vehiculoId',
       views: {
         'tab-picoyplaca': {
-          templateUrl: 'templates/picoyplaca-detalle.html',
+          templateUrl: 'templates/picoyplaca-detail.html',
           controller: 'PicoPlacaDetalleCtrl'
+        }
+      }
+    })
+    .state('tab.picoyplaca-add', {
+      url: '/picoyplaca/add/vehiculo',
+      views: {
+        'tab-picoyplaca': {
+          templateUrl: 'templates/picoyplaca-add.html',
+          controller: 'PicoPlacaAgregarCtrl'
         }
       }
     })
